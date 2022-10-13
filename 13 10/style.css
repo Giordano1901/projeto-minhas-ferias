@@ -1,0 +1,37 @@
+body{
+    margin: 0 auto;
+}
+
+header{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: yellow;
+}
+header img{
+    width: 5%;
+}
+header h2{
+    text-shadow: white 1px 1px;
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+}
+header li{
+    background-color: red;
+    text-shadow: black 1px 1px;
+    border-radius: 100px;
+    padding: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin-left: 150px;
+}
+#btn-principal{
+    background-color: red;
+    padding: 20px;
+    border-radius: 100px;
+}
