@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body{
     margin: 0 auto;
+    background-color: rgb(0, 225, 255);
+    overflow: hidden;
 }
 
 header{
@@ -10,10 +14,13 @@ header{
     background-color: yellow;
 }
 header img{
-    width: 5%;
+    width: 3%;
 }
 header h2{
-    text-shadow: white 1px 1px;
+    padding-left: 15px;
+    font-size: 1.9em;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: white 3px 3px;
 }
 header ul{
     list-style-type: none;
@@ -34,4 +41,27 @@ a{
     background-color: red;
     padding: 20px;
     border-radius: 100px;
+}
+#MinhasFerias{
+    background-color: white;
+    width: 60%;
+    height: 53em;
+    position: fixed;
+    left: 25em;
+}
+#MinhasFerias img{
+    margin-left: 2%;
+    width: 70%;
+}
+#FormMinhasFerias{
+    text-align: center;
+}
+#FormMinhasFerias textarea{
+    background-image: url(https://media.discordapp.net/attachments/595706481555537969/1030504366383312988/E.E_PEDRO_ALVARES_CABRAL_2.png?width=1265&height=629);
+    background-size: 100%;
+    resize: none;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    letter-spacing: 1px;    
 }
