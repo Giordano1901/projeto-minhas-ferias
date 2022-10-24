@@ -21,3 +21,28 @@ file.addEventListener('change', (event) => {
 
     reader.readAsDataURL(file.files[0]);
 });
+
+const deviceStatus = document.querySelector('.device-status');
+const snackbar = () => {
+    setTimeout(() => {
+        deviceStatus.classList.add('hide');
+    }, 8000)
+}
+navigator.permissions.query({
+    name: 'microphone'
+})
+.then(function(result){
+    console.log(result)
+    if(result.state === 'garanted'){
+        deviceStatus.innerHTML = 'Device access granted'
+        snackbar()
+    }
+    if(result.state === 'prompt'){
+        deviceStatus.innerHTML = 'Accept access devices request'
+        snackbar()
+    }
+    if(result.state === 'denied'){
+        deviceStatus.innerHTML = 'Please enable Microphone'
+        snackbar()
+    }
+})
