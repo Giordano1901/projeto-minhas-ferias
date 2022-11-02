@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+html{
+    font-family: 'Lucida Sans';
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Oxygen";
+}
+body{
+    margin: 0 auto;
+    background-color: #459ad6;
+}
+/* == CSS DO NAV */
+.topNav{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fb0;
+}
+.topNav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.topNav a{
+    color: black;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+    font-weight: 550;
+    border-bottom: rgb(200, 147, 0);
+}
+.topNav a:hover{
+    background: #ffd562;
+}
+.top-header-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+.top-header h2{
+    font-size: 1.3em;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: white 2px 2px;
+    font-weight: 1;
+}
+.top-header img{
+    margin: .40em;
+    width: 12%;
+    border-radius: 3px;
+}
+header li{
+    background-color: #fb0;
+    padding: 5px;
+}
+.close{
+    display: none;
+}
+#btn-mobile{
+    background-color: #fb0;
+    padding: .5em;
+    font-size: 1.4em;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 550;
+}
+#btn-mobile:hover{
+    background-color: #ffd562;
+}
+/* ============= */
+/* ======== Body */
+section{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.boxContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+.boxContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.boxContainer label, input, button{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.boxContainer input[type='text']{
+    border-radius: 10px;
+    border-color: rgb(65, 179, 255);
+    padding: 5px;
+    font-size: 25px;
+    width: 300px;
+}
+.boxContainer input[type='password']{
+    border-radius: 10px;
+    border-color: rgb(65, 179, 255);
+    padding: 5px;
+    font-size: 25px;
+    width: 300px;
+}
+.boxContainer button, input[type='submit']{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border-color:  rgb(65, 179, 255);
+    cursor: pointer;
+}
+.boxContainer input[type='submit']{
+    background-color: rgb(255, 116, 116);
+}
+.boxContainer button{
+    background-color: rgb(98, 204, 98);
+}
+.boxContainer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 18px;
+}
+/* ============= */
+/* ====== FOOTER */
+.bottom-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.footerContent{
+    display: flex;
+    padding: 10px;
+}
+.footerContent img{
+    width: 50px;
+    height: 50px;
+}
+.footerContent p{
+    font-size: 12px;
+    line-height: 14px;
+}
+.footerContent span{
+    font-weight: 700;
+}
+/* ============= */
+
+
+
+
+
+
+@media (min-width: 750px){
+    /* == CSS DO NAV */
+    .topNav{
+        display: flex;
+        text-align: none;
+        flex-direction: row;
+        background-color: #fb0;
+    }
+    .topNav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    .topNav a{
+        color: black;
+        text-decoration: none;
+        padding: 1em;
+        display: block;
+        font-weight: 550;
+        border-bottom: rgb(200, 147, 0);
+    }
+    .topNav a:hover{
+        background: #ffd562;
+    }
+    .top-header-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .top-header h2{
+        font-size: 1.2em;
+    }
+    .top-header img{
+        width: 5%;
+    }
+    header li{
+        font-size: 0.8em;
+    }
+    #btn-mobile{
+        display: none;
+    }
+    /* ============= */
+}
+/* background-color: rgb(89, 189, 255); */
