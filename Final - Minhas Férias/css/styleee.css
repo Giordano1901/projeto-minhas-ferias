@@ -1,0 +1,916 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+html{
+    font-family: 'Lucida Sans';
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Oxygen";
+}
+p{
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+body{
+    margin: 0 auto;
+    background-color: #118ece;
+}
+input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }  
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.none{
+    display: none;
+}
+.skip-to-main-content-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    opacity: 0;
+  }
+  .skip-to-main-content-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+/* ==================== */
+
+/* ==================== */
+/* Acessibilidade */
+.pularConteudo{
+    display: none;
+}
+.altoContraste{
+    background: none;
+    border: none;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+.altoContraste:hover{
+    background: #ffd562;
+}
+#altoContraste img{
+    width: 40%;
+}
+/* ==================== */
+
+/* CSS DO NAV */
+/* ==================== */
+.topNav{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fb0;
+}
+.logoLink{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 0.3em;
+    font-weight: 550;
+}
+.top-header h2{
+    color: black;
+    font-size: 1.1em;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: white 2px 2px;
+    font-weight: 1;
+}
+.topNav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 0.8em;
+    font-weight: 550;
+}
+.topNav a:hover{
+    background: #ffd562;
+}
+.top-header-title{
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+.top-header img{
+    margin: .40em;
+    width: 12%;
+    border-radius: 3px;
+}
+header li{
+    /* background-color: #fb0;color: black; */
+    padding: 5px;
+}
+.close{
+    display: none;
+}
+#btn-mobile{
+    margin: 2px;
+    background-color: #fb0;
+    border: none;
+    cursor: pointer;
+}
+.bar{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+#btn-mobile:hover{
+    background-color: #ffd562;
+}
+
+/* ==================== */
+
+/* Content do body */
+/* ==================== */
+.initialContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.initialContent img{
+    width: 70%;
+}
+.content{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: #ffc544;
+}
+.content h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 0;
+}
+.content p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-top: 0;
+}
+.content button{
+    margin-bottom: 10px;
+    font-size: 1em;
+    padding: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px black;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 2.5;
+    padding: 0 2em;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    touch-action: manipulation;
+    margin-top: 10px;
+}
+.content button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 0, 0, 0.5), .125rem .125rem 1rem rgba(255, 255, 255, 0.5);
+}  
+.content button:not([disabled]):hover {
+box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 0, 0, 0.5), .125rem .125rem 1rem rgba(rgba(255, 255, 255, 0.5));
+}
+.btn_alunobox{
+    background-color: #FAC252;
+    color: #FFFFFF;
+}
+.btn_redirect{
+    background-color: #50D9CF;
+    color: #FFFFFF;
+}
+/* ==================== */
+
+/* Box geral            */
+/* ==================== */
+#box{
+    position: fixed;
+    transform: translate(0%, 10%);
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 350px;
+    max-height: 350px;
+    padding: 20px;
+    box-shadow: 0 0 0 1000px rgba(0,0,0,.8);
+}
+.to_close{
+    float: right;
+    background: none;
+    border: 0;
+    font-weight: 900;
+    cursor: pointer;
+}
+/* ==================== */
+
+/* Box do aluno         */
+/* ==================== */
+.alinhar1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.opcaoAluno{
+    display: flex;
+    flex-direction:column;
+    margin-top: 80px;
+}
+.btn{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.aluno_FirstAccess{
+    background-color: #F5AC2F;
+}
+.aluno_Access{
+    background-color: #F56A5F;
+}
+.box_aluno{
+    background-color: #5C87F8;
+}
+.box_aluno h3{
+    text-align: center;
+    color:#F7E84F;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.box_aluno label, input{
+    margin-bottom: 15px;
+}
+.box_aluno label{
+    font-size: 1.3em;
+    color: white;
+}
+.box_aluno input[type='number'], input[type='password'], input[type='text']{
+    border-radius: 10px;
+    padding: 7px;
+    width: 220px;
+}
+.box_aluno input[type='submit']{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.inputAcesso{
+    background-color: #F56A5F;
+}
+.inputPrimeiroAcesso{
+    background-color: #F5AC2F;;
+}
+/* ==================== */
+
+/* Box do Professor */
+/* ==================== */
+.alinhar1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.opcaoProf{
+    display: flex;
+    flex-direction:column;
+    margin-top: 80px;
+}
+.btn{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.inputAcesso{
+    background-color: #F56A5F;
+}
+.inputPrimeiroAcesso{
+    background-color: #F5AC2F;;
+}
+
+/* Section da atividade */
+/* ==================== */
+.sectionAtividade{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#att_title{
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#att_title h1, p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+    margin-bottom: 15px;
+}
+#exit{
+    border-radius: 20%;
+    /* height: 200px; */
+    cursor: pointer;
+    width: 45px;
+    height: 35px;
+}
+#exit:hover{
+    background-color: #E84B4A;
+}
+#exit img{
+    width: 70%;
+    margin: 0;
+}
+.selectButtonsContent{
+    text-align: center;
+    background-color: #FBFF39;
+    max-width: 200px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.selectButtonsContent h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    margin-top: 0;
+    padding: 6px;
+}
+.selectButtonsContent button{
+    background: none;
+    border: none;   
+    cursor: pointer;
+}
+.selectButtonsContent img{
+    width: 50%;
+    background-color:#F7E84F;
+}
+/* ====== Footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0;
+    background-color: #001236;
+}
+footer h2, h3{
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 1.2em;
+    color: white;
+}
+footer li, p{
+    list-style: none;
+    font-size: 1.2em;
+    color: white;
+}
+footer span{
+    cursor: pointer;
+    text-decoration: underline;
+}
+footer span:hover{
+    color: #FBFF39;
+}
+/* ==================== */
+
+/* Estilo dos envios em geral */
+/* ==================== */
+.title{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.instruct{
+    color: white;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.send_input{
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-top: 10px;
+}
+.send_input:hover{
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+.send_input{
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+/* ==================== */
+
+/* Form de envio de texto */
+/* ==================== */
+textarea{
+    color: black;
+    background-image: url("https://cdn.discordapp.com/attachments/684308609819082765/1041771181671448666/linha_caderno.png");
+    
+    font-size: 21px;
+    resize: none;
+    width: 85%;
+}
+
+/* Form de envio de imagem */
+/* ==================== */
+#form_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imageContainer{
+    display: flex;
+    justify-content: center;
+}
+
+/* Form de envio de audio */
+/* ==================== */
+
+#form_audio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#saved-audio-messages{
+    display: flex;
+    flex-direction: column;
+}
+.recordControls{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.btnRecord{
+    margin: 10px;
+    width: 130px;
+    height: 160px;
+    /* background:none; */
+    border: none;
+    padding: 10px;
+}
+.btnRecord img{
+    margin: 0;
+    width: 100%;
+}
+.btnRecord p{
+    margin: 10px;
+    font-size: 1.7em;
+    font-weight: 470;
+}
+/* ==================== */
+
+/* CSS dos Inputs */
+/* ==================== */
+input[type='file']{
+    display: none;
+}
+.max-width{
+    /* max-width: 500px; */
+    width: 100%;
+}
+#imgPhoto{
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 5px;
+    background-color: #eee;
+    border: 5px solid #ccc;
+    cursor: pointer;
+    transition: background.3s;
+}
+#imgPhoto:hover{
+    background-color: rgb(180, 180, 180);
+    border: 5px solid #111;
+}
+/* ==================== */
+
+/* Exibição do aluno e centralização */
+/* ==================== */
+#div_visu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enunciado{
+    text-align: center;
+    color: white;
+}
+#exibe_atividade{
+    align-items: center;
+}
+#div_visu input[type="submit"]{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+#div_visu input[type="number"]{
+    border-radius: 10px;
+    padding: 7px;
+    width: 160px;
+}
+#_1{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+#_1 img{
+    cursor: zoom-in;
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 500px;
+}
+#focusLock{
+    position: fixed;
+    transform: translate(0%, -15%);
+    box-shadow: 0 0 0 1000px rgba(0,0,0,.8);
+}
+#focusLock img{
+    min-width: 150px;
+    max-width: 350px;
+    min-height: 150px;
+    max-height: 450px;
+    cursor: zoom-out;
+}
+.atividade_visu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* ==================== */
+
+/* ==================== */
+/* Modo escuro */
+.body_contrast{
+    background: #1e1e1e;
+}
+.top-header_contrast .logoLink{
+    background-color: #111;
+}
+.top-header_contrast h2{
+    color: #FBFF39;
+    text-shadow: 0px 0px;
+}
+.topNav_contrast{
+    background-color: rgb(252, 252, 252);
+}   
+.topNav_contrast a:hover{
+    background: #111;
+    color: #FBFF39;
+    text-decoration: underline;
+}
+.topNav_contrast a:focus{
+    background: #111;
+    color: #FBFF39;
+}
+.content_contrast{
+    color: #FBFF39;
+}
+.content_contrast p{
+    color: #FBFF39;
+}
+.aluno_contraste{
+    background-color: #111;
+}
+.btn_contrast{
+    background-color: #111;
+    color: #F7E84F;
+}
+.title_contrast{
+    color: #F7E84F;
+}
+.enunciado_contrast h3, .enunciado_contrast p{
+    color: #F7E84F;
+}
+.selectButtons_contrast{
+    background-color: #111;
+}
+.footer_contrast{
+    background-color: black;
+}
+.footer_contrast h3{
+    color: #F7E84F;
+}
+/* ==================== */
+
+@media (min-width: 750px){
+    /* == CSS DO NAV */
+    .topNav{
+        display: flex;
+        text-align: none;
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 75px;
+    }
+    .logoLink{
+        max-width: 290px;
+    }
+    .top-header h2{
+        font-size: 1.1em;
+        font-family: 'Fredoka One', cursive;
+        font-weight: 1;
+    }
+    .top-header img{
+        width: 15%;
+    }
+    .topNav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    header li{
+        background-color: #ffffff00;
+        font-size: 0.95em;
+        margin: 0;
+        padding: 0;
+        margin-left: 15px;
+    }
+    #btn-mobile{
+        display: none;
+    }
+    /* ============= */
+    /* Body elements */
+    .initialContent{
+        flex-direction: row;
+        margin-top: 10%;
+    }
+    .initialContent img{
+        width: 30%;
+    }
+    #box{
+        transform: translate(80%, 10%);
+    }
+    .atividade_visu{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    /* ============= */
+
+    /* Butões */
+    /* ============= */
+    .selectButtons{
+        display: flex;
+        flex-direction: row;
+    }
+    .selectButtonsContent{
+        margin: 5%;
+    }
+    .selectButtonsContent img{
+        width: 70%;
+        background-color:#F7E84F;
+    }
+    /* ============= */
+
+    /* Rezise de audio */
+    /* ============= */
+    .btnRecord img{
+        margin: 0;
+        width: 100%;
+    }
+    .btnRecord p{
+        margin: 10px;
+        font-size: 1.7em;
+        font-weight: 470;
+    }
+
+    #focusLock img{
+        min-width: 350px;
+        max-width: 750px;
+        min-height: 350px;
+        max-height: 750px;
+    }
+
+    /* ============== */
+    /* Acessibilidade */
+    .pularConteudo{
+        display: block;
+        opacity: 0;
+    }
+    .pularConteudo:focus{
+        opacity: 1;
+    }
+    }
+    
+    @media (min-width: 1050px){
+        /* == CSS DO NAV */
+        .topNav{
+            max-height: 50px;
+        }
+        header li{
+            font-size: 0.9em;
+        }
+        /* ============= */
+        .initialContent{
+            justify-content: center;
+            margin-top: 0%;
+        }
+        .initialContent h1{
+            font-size: 2.7em;
+        }
+        .initialContent p{
+            font-size: 1.5em;
+            word-break: break-word;
+        }
+        .initialContent img{
+            width: 40%;
+        }
+        #box{
+            transform: translate(0%, -10%);
+        }
+        
+        /* ============= */
+
+        /* Botões para escolher envio */
+        /* ============= */
+        .selectButtonsContent{
+            max-width: 70%;
+            margin: 5%;
+        }
+
+        .selectButtonsContent img{
+            width: 70%;
+            background-color:#F7E84F;
+        }
+        .selectButtonsContent h3{
+            font-size: 1.3em;
+        }
+        /* ============= */
+
+        /* Rezise textarea */
+        /* ============= */
+        textarea{
+            font-size: 21px;
+            resize: none;
+            width: 100%;
+            height: 333px;
+        }
+        
+        /* ============= */
+
+        /* ============= */
+        /* Rezise camera */
+        input[type='file']{
+            display: none;
+        }
+        .max-width{
+            /* max-width: 500px; */
+            width: 100%;
+        }
+        #imgPhoto{
+            min-width: 200px;
+            max-width: 200px;
+            min-height: 250px;
+            max-height: 250px;
+        }
+        /* ============= */
+
+        /* Envio de audio Rezise */
+        /* ============= */
+        .recordControls{
+            justify-content: center;
+        }
+        .btnRecord{
+            margin: 50px;
+            width: 130px;
+            height: 160px;
+            /* background:none; */
+            border: none;
+            padding: 10px;
+        }
+        .btnRecord img{
+            margin: 0;
+            width: 100%;
+        }
+        .btnRecord p{
+            margin: 10px;
+            font-size: 1.7em;
+            font-weight: 470;
+        }
+        /* ====== Professor */
+        .selectButtons_prof{
+            max-width: 500px;
+        }
+        .selectButtonsContent_prof{
+            max-width: 350px;
+            
+        }
+        .selectButtonsContent_prof h3{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 0;
+            padding: 6px;
+        }
+        .selectButtonsContent_prof img{
+            width: 70%;
+            background-color:#F7E84F;
+        }
+
+
+        /* Exibição do aluno e centralização */
+        /* ==================== */
+        #_1{
+            padding: 2em;
+            /* padding: 5em; */
+            /* padding: 10%; */
+        }
+
+        /* ====== Footer */
+        footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+    }
+    @media (min-width: 1300px){
+        #box{
+            transform: translate(0%, 10%);
+        }
+        /* ============= */
+        
+
+        /* ============= */
+
+        /* Form de envio de texto */
+        /* ==================== */
+        textarea{
+            width: 700px;
+            height: 525px;
+
+        }
+        .textarea{
+            width: 500px;
+            height: 200px;
+        }
+        /* Form de envio de imagem */
+        /* ==================== */
+        #imgPhoto{
+            min-width: 500px;
+            max-width: 500px;
+            min-height: 500px;
+            max-height: 500px;
+            padding: 5px;
+            background-color: #eee;
+            border: 5px solid #ccc;
+            cursor: pointer;
+            transition: background.3s;
+        }
+        #imgPhoto:hover{
+            background-color: rgb(180, 180, 180);
+            border: 5px solid #111;
+        }
+        /* Exibição do aluno e centralização */
+        /* ==================== */
+        #_1{
+            padding: 5em;
+        }
+
+}
